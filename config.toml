@@ -13,7 +13,7 @@ paginate = 10
 
 [params]
   # Shown in the home page
-  subtitle = "Writer ... solely for compilers, and maybe you"
+  subtitle = "Writer ... solely for compilers, and maybe for you"
 #brand = "Blackburn"
 #  googleAnalytics = "Your Google Analytics tracking ID"
 #  disqus = "Your Disqus shortname"
@@ -56,3 +56,7 @@ paginate = 10
   github = "amirhomayoun"
   stackoverflow = "1727639"
   linkedin = "amirsadoughi"
+  athlinks = "252998642"
+  typeracer = "amirhomayoun"
+  lastfm = "amirhomayoun"
+  goodreads = "amirhomayoun"
