@@ -50,13 +50,13 @@ paginate = 10
 [social]
   # Link your social networking accouns to the side menu
   # by entering your username or ID.
-  twitter = "amirhomayoun"
-  facebook = "amirhomayoun"
-  instagram = "amirhomayoun26"
+  #twitter = "amirhomayoun"
+  #facebook = "amirhomayoun"
+  #instagram = "amirhomayoun26"
   github = "amirhomayoun"
   stackoverflow = "1727639"
   linkedin = "amirsadoughi"
   athlinks = "252998642"
   typeracer = "amirhomayoun"
   lastfm = "amirhomayoun"
-  goodreads = "amirhomayoun"
+  #goodreads = "amirhomayoun"

@@ -6,12 +6,10 @@ description = "About me and this site"
 +++
 
 <img style="float: right;" src="https://images.gr-assets.com/users/1326915027p6/119584.jpg", height="166">
-## Me in a paragraph
+## Me in a few sentences
 My name is Amir Sadoughi (if you don’t speak Persian, consider that “h” after “g” to be silent (just as in ghost!)).
 I am a software developer, and like free and open-source software. I was introduced to Linux in 2004 (Thank you [Canonical](https://www.canonical.com/) for the [shipit](http://blog.canonical.com/2011/04/05/shipit-comes-to-an-end/) program!)
-I have been working at Bloomberg L.P. since 2013 and write financial software using C++/C/Python/Fortran/Javascript.
-
-
+I have been working at Bloomberg L.P. since 2013 and write financial software using C++, C, Python, Fortran, Javascript.
 
 
 
@@ -26,15 +24,29 @@ I have been working at Bloomberg L.P. since 2013 and write financial software us
     * [TypeMatrix 2030](http://www.typematrix.com/2030/features.php)
     * [Kinesis Advantage](https://www.kinesis-ergo.com/shop/advantage2/)
 
-### Healthy things I like
-* Running
-* Going to the gym
-* Fitbit
+### Services I like
+* [SublimeFund](https://sublimefund.org/)
+* [SyncThing](https://syncthing.net/)
+
+### Websites I like
+* [Python module of the week](https://pymotw.com/3/)
 
 ### Things I do
-* Playing with my dotfiles
-* Practice touch typing
+* Playing with my dotfiles (specially to tweak vim and tmux)
+* Practicing touch typing (not as often anymore though)
+* Running (have run 3 marathons so far, Berlin, Chicago and New York City)
+
+<!--
 
 ### Things I use
 * Fitbit
 * Android
+-->
+
+### Things I want
+* [Writing one post here every week](/posts)
+* Doing the 100 push-ups a day challenge
+* Touch typing speed of 100 wpm (at ~75 right now)
+* Being able to touch type on QWERTY
+* [These books](https://smile.amazon.com/hz/wishlist/ls/3LOGANBLMOY3M) and [these things](https://smile.amazon.com/hz/wishlist/ls/3JTX2DFI2QTIW)
+
