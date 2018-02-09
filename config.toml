@@ -10,6 +10,7 @@ paginate = 10
 [indexes]
   tag = "tags"
   topic = "topics"
+#post = "posts"
 
 [params]
   # Shown in the home page
@@ -34,18 +35,18 @@ paginate = 10
     pre = "<i class='fa fa-list fa-fw'></i>"
     weight = 2
     identifier = "post"
-    url = "/posts/"
+    url = "/post/"
   [[menu.main]]
     name = "Tags"
     pre = "<i class='fa fa-folder fa-fw'></i>"
     weight = 2
-    identifier = "tag"
+    identifier = "tags"
     url = "/tags/"
   [[menu.main]]
     name = "Topics"
     pre = "<i class='fa fa-list fa-fw'></i>"
     weight = 2
-    identifier = "topic"
+    identifier = "topics"
     url = "/topics/"
   [[menu.main]]
     name = "About"
