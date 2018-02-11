@@ -1,4 +1,4 @@
-baseURL = "http://amirsadoughi.netlify.com/"
+baseURL = "https://amirsadoughi.com/"
 languageCode = "en-us"
 title = "Amir H. Sadoughi"
 theme = "blackburn"
