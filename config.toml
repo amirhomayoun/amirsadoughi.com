@@ -17,7 +17,7 @@ paginate = 10
   subtitle = "Writer ... solely for compilers, and now maybe for humans too!"
 #brand = "Blackburn"
 #  googleAnalytics = "Your Google Analytics tracking ID"
-#  disqus = "Your Disqus shortname"
+  disqus = "amirsadoughi"
   # CSS name for highlight.js
   highlightjs = "androidstudio"
   dateFormat = "02 Jan 2006, 15:04"
