@@ -1,7 +1,7 @@
 +++
 title = "De Googlify Your Life"
 date = 2018-02-26T00:19:23-05:00
-draft = true
+draft = false
 tags = ['gpg']
 topics = ['security']
 description = ""
