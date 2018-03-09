@@ -23,7 +23,7 @@ Things you can do to reduce the presence of Google in your life:
         * Try switching from [Google](https://google.com) to [duckduckgo](https://duckduckgo.com) or [framabee](https://framabee.org/). Right now I am using [startpage](https://www.startpage.com/) and unlike duckduckgo, I am happy with it!
         * Install plugins in your browser to stop Google from tracking the URL you click on [google-no-tracking-url](https://addons.mozilla.org/en-US/firefox/addon/google-no-tracking-url/)
     * Email
-        * Look into replacements for Gmail. [ProtonMail](https://protonmail.com/) and [mailbox.org](https://mailbox.org/) are the two candidates.
+        * Look into replacements for Gmail. [ProtonMail](https://protonmail.com/) and [mailbox.org](https://mailbox.org/) are the two candidates. 
         * Look into GPG and encrypting your email in general.
     * Maps
         * Keep using Google Maps!
@@ -31,5 +31,5 @@ Things you can do to reduce the presence of Google in your life:
     * Other services
         * Switch your domain management from Google domains to Namecheap
         * Switch from Google keep to a note taking and syncing via syncthing system
-
+        * Switch your DNS server from Google's to Dns.watch or OpenNIC
 
