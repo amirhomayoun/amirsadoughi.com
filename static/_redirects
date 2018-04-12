@@ -1,0 +1,2 @@
+# Redirect domain aliases to primary domain
+https://amirnotes.com/* https://amirsadoughi.com/:splat 301!
