@@ -12,7 +12,7 @@ Instead of waiting for this to be "complete", I am going to release it, and will
 Things you can do to reduce the presence of Google in your life:
 
 * Up until now
-    * Check [deseat.me](deseat.me) to see what accounts you have online. Stop logging into websites using Google
+    * Check [deseat.me](https://www.deseat.me/) to see what accounts you have online. Stop logging into websites using Google
     * Check [degooglisons](https://degooglisons-internet.org/liste?l=en) to see what services there are you can use.
     * Check [your Google activity](https://myactivity.google.com/myactivity) to see what data Google has stored. You can [download](https://takeout.google.com/settings/takeout?pli=1) all your data.
 * Going forward
