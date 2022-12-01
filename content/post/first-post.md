@@ -3,7 +3,7 @@ title = "My first post using Hugo, Github, and Netlify"
 date = 2018-02-13T00:05:11-05:00
 draft = false
 tags = ["Hugo", "Netlify", "git", "Github"]
-topics = ["Web Development", "Automation"]
+categories = ["Web Development", "Automation"]
 description = "A programmer's approach to creating websites"
 +++
 

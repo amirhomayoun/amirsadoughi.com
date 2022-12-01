@@ -5,7 +5,8 @@ sidemenu = "true"
 description = "All things me"
 +++
 
-<img style="float: right;" src="https://images.gr-assets.com/users/1326915027p6/119584.jpg", height="190">
+<img style="float: right;" src="https://images.gr-assets.com/users/1326915027p6/119584.jpg" height="190">
+
 ## Me in a few sentences
 My name is Amir Sadoughi (if you don’t speak Persian, consider that “h” after “g” to be silent (just as in ghost!)).
 I am a mechanical engineer at heart (even though I have been away from it for a few years now), and have been working as a software developer for Bloomberg L.P. since 2013 writing financial software using C++, C, Python, Fortran, Bash and JavaScript. I was introduced to Linux in 2004 (Thanks to [Canonical](https://www.canonical.com/) and the [shipit](http://blog.canonical.com/2011/04/05/shipit-comes-to-an-end/) program) and am a fan of free and open-source software!)

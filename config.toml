@@ -9,7 +9,7 @@ paginate = 10
 
 [indexes]
   tag = "tags"
-  topic = "topics"
+  category = "categories"
 #post = "posts"
 
 [params]
@@ -44,16 +44,17 @@ paginate = 10
     url = "/post/"
   [[menu.main]]
     name = "Tags"
-    pre = "<i class='fa fa-folder fa-fw'></i>"
+#pre = "<i class='fa fa-folder fa-fw'></i>"
+    pre = "<i class='fa-solid fa-tags'></i>"
     weight = 4
     identifier = "tags"
     url = "/tags/"
   [[menu.main]]
-    name = "Topics"
-    pre = "<i class='fa fa-list fa-fw'></i>"
+    name = "Categories"
+    pre = "<i class='fa fa-folder fa-fw'></i>"
     weight = 4
-    identifier = "topics"
-    url = "/topics/"
+    identifier = "categories"
+    url = "/categories/"
   [[menu.main]]
     name = "Contact"
     pre = "<i class='fa fa-phone fa-fw'></i>"
@@ -73,3 +74,5 @@ paginate = 10
   typeracer = "amirhomayoun"
   lastfm = "amirhomayoun"
   #goodreads = "amirhomayoun"
+[markup.goldmark.renderer]
+unsafe= true
