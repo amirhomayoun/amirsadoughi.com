@@ -45,7 +45,7 @@ paginate = 10
   [[menu.main]]
     name = "Tags"
 #pre = "<i class='fa fa-folder fa-fw'></i>"
-    pre = "<i class='fa-solid fa-tags'></i>"
+    pre = "<i class='fas fa-tags'></i>"
     weight = 4
     identifier = "tags"
     url = "/tags/"
