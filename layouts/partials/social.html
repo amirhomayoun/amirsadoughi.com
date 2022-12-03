@@ -200,7 +200,13 @@
 
     {{ with .Site.Social.goodreads }}
     <li class="pure-menu-item">
-      <a class="pure-menu-link" href="https://www.goodreads.com/user/show/119584-amir-h-sadoughi{{ . }}" target="_blank"><i class="fab fa-goodreads"></i>Goodreads</a>
+      <a class="pure-menu-link" href="https://www.goodreads.com/user/show/{{ . }}" target="_blank"><i class="fab fa-goodreads"></i>Goodreads</a>
+    </li>
+    {{ end }}
+
+    {{ with .Site.Social.mastodon }}
+    <li class="pure-menu-item">
+        <a class="pure-menu-link" href="https://mastodon.amirsadoughi.com/@{{ . }}" rel="me" target="_blank"><i class="fab fa-mastodon"></i>Mastodon</a>
     </li>
     {{ end }}
 

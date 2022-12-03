@@ -73,6 +73,7 @@ paginate = 10
   athlinks = "252998642"
   typeracer = "amirhomayoun"
   lastfm = "amirhomayoun"
-  #goodreads = "amirhomayoun"
+  goodreads = "119584"
+  mastodon = "amir"
 [markup.goldmark.renderer]
 unsafe= true
