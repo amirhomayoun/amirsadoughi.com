@@ -1,5 +1,10 @@
 <h4><i class="fas fa-share-alt" aria-hidden="true"></i>&nbsp;Share!</h4>
 <ul class="share-buttons">
+
+    <script src="/js/mastodon_share.js"></script>
+
+	<li><a href="javascript:void(0);" onclick="MastodonShare(this);" data-src="Check out:&amp;url={{ .Permalink }}" title="Share on Mastodon"><i class="fab fa-mastodon" aria-hidden="true"></i><span class="sr-only">Share on Mastodon</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
 	<li><a href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}" target="_blank" title="Share on Facebook"><i class="fab fa-facebook" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
 	<li><a href="https://twitter.com/intent/tweet?source={{ .Permalink }}" target="_blank" title="Tweet"><i class="fab fa-twitter" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
