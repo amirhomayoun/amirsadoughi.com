@@ -1,0 +1,8 @@
+{{ define "main" }}
+<h1><span class="meta">{{ .Data.Singular | title }}:</span> {{ .Title }}</h1>
+<ul class="post-list compact">
+  {{- range .Pages }}
+  <li><time class="meta" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006" }}</time> <a class="title" href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+  {{- end }}
+</ul>
+{{ end }}

@@ -1,0 +1,11 @@
+{{- $url := .Permalink }}
+{{- $text := printf "%s %s" .Title $url }}
+<div class="share">
+  <span>Share:</span>
+  <button type="button" data-share="mastodon" data-text="{{ $text }}">Mastodon</button>
+  <a href="https://bsky.app/intent/compose?text={{ $text | urlquery }}" rel="noopener" target="_blank">Bluesky</a>
+  <a href="mailto:?subject={{ .Title | urlquery }}&amp;body={{ $url | urlquery }}">Email</a>
+  <button type="button" data-share="copy" data-url="{{ $url }}">Copy link</button>
+</div>
+{{- $js := resources.Get "js/share.js" | minify | fingerprint }}
+<script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" defer></script>

@@ -1,0 +1,8 @@
+{{- /* Default sort is newest first: PrevInSection is older, NextInSection is newer. */ -}}
+{{- $older := .PrevInSection }}{{ $newer := .NextInSection }}
+{{- if or $older $newer }}
+<nav class="pager" aria-label="More posts">
+  {{- with $older }}<a class="prev" href="{{ .RelPermalink }}"><small>← Older</small>{{ .Title }}</a>{{ end }}
+  {{- with $newer }}<a class="next" href="{{ .RelPermalink }}"><small>Newer →</small>{{ .Title }}</a>{{ end }}
+</nav>
+{{- end }}

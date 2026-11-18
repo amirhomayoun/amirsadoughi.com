@@ -1,0 +1,27 @@
+{{ define "main" }}
+<article>
+  <header class="post-header">
+    <h1>{{ .Title }}</h1>
+    {{- if eq .Section "post" }}
+    <div class="meta">{{ partial "date.html" . }} · {{ .ReadingTime }} min read</div>
+    {{- end }}
+  </header>
+
+  <div class="content">
+    {{ .Content }}
+  </div>
+
+  {{- if eq .Section "post" }}
+  <footer class="post-footer">
+    {{- with .GetTerms "tags" }}
+    <ul class="terms" aria-label="Tags">
+      {{- range . }}<li><a href="{{ .RelPermalink }}">#{{ .LinkTitle }}</a></li>{{ end }}
+    </ul>
+    {{- end }}
+    {{ partial "share.html" . }}
+    {{ partial "pager.html" . }}
+  </footer>
+  {{ partial "comments.html" . }}
+  {{- end }}
+</article>
+{{ end }}

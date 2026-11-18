@@ -1,0 +1,16 @@
+{{ define "main" }}
+<section class="intro">
+  <h1 class="sr-only">{{ site.Title }}</h1>
+  {{ with site.Params.subtitle }}<p class="lead">{{ . }}</p>{{ end }}
+</section>
+
+<ul class="post-list">
+  {{- range where site.RegularPages "Section" "post" }}
+  <li>
+    <a class="title" href="{{ .RelPermalink }}">{{ .Title }}</a>
+    <div class="meta">{{ partial "date.html" . }}</div>
+    {{ with partial "description.html" . }}<p>{{ . }}</p>{{ end }}
+  </li>
+  {{- end }}
+</ul>
+{{ end }}
