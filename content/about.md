@@ -5,7 +5,7 @@ sidemenu = "true"
 description = "All things me"
 +++
 
-<img style="float: right;" src="https://images.gr-assets.com/users/1326915027p6/119584.jpg" height="190">
+<img class="float-right" src="https://images.gr-assets.com/users/1326915027p6/119584.jpg" height="190" alt="Amir H. Sadoughi">
 
 ## Me in a few sentences
 My name is Amir Sadoughi (if you don’t speak Persian, consider that “h” after “g” to be silent (just as in ghost!)).
@@ -48,5 +48,5 @@ I am a mechanical engineer at heart (even though I have been away from it for a 
 * To do the 100 push-ups a day challenge
 * To touch type at 100 wpm (at ~75 right now)
 * To touch type on QWERTY!
-* [These books](https://smile.amazon.com/hz/wishlist/ls/3LOGANBLMOY3M) and [these things](https://smile.amazon.com/hz/wishlist/ls/3JTX2DFI2QTIW)
+* [These books](https://www.amazon.com/hz/wishlist/ls/3LOGANBLMOY3M) and [these things](https://www.amazon.com/hz/wishlist/ls/3JTX2DFI2QTIW)
 

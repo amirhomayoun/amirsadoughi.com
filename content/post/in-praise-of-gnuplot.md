@@ -4,7 +4,7 @@ date = 2023-04-29T00:22:23-05:00
 draft = false
 tags = ['gnuplot', 'plot', 'terminal']
 categories = ['Terminal']
-description = ""
+description = "Why I keep coming back to Gnuplot after 15 years, with a quick tour from plotting in the terminal to plotting your own data."
 +++
 
 ## Background
@@ -84,7 +84,7 @@ gnuplot> plot sin(x)
 And a separate window opnes up with this plot in it:
 
 
-<img style="float:below" width="550" height="auto" src="/images/sin_x.png">
+<img class="figure" width="550" src="/images/sin_x.png" alt="Plot of sin(x) rendered by gnuplot">
 
 There are different **terminal**s available, and the terminal basically dicates the format you want your output to be. We saw *dumb* (which is inside the terminal, and *X11* which is inside a separtae window. You can have it generate images in *png* and *jpg* format, or *eps*, *ps*, or *pdf* files. The list of all terminals can be found on the [documentation page](http://gnuplot.info/docs_5.5/Terminals.html). If we set the terminal to any of these formats, and try to plot, you see binray data will be printed in the terminal, we need to redirect the output to a file for the other formats to work.
 
@@ -104,13 +104,13 @@ gnuplot> plot sin(x)
 And now we have an output.png file in the directory that we ran gnuplot from:
 
 
-<img style="float:below" width="550" height="auto" src="/images/sin_x_2.png">
+<img class="figure" width="550" src="/images/sin_x_2.png" alt="Plot of sin(x) with custom styling">
 
 
 Let's try with eps:
 
 
-{{< highlight shell "hl_lines=1 10 11, style=monokai" >}}
+{{< highlight shell "hl_lines=1 10 11" >}}
 
 
 gnuplot> set terminal postscript eps
@@ -130,7 +130,7 @@ gnuplot> plot sin(x)
 
 And just like that we have an eps file that we can convert to a pdf using:
 tu
-{{< highlight bash "hl_lines=1, style=monokai" >}}
+{{< highlight bash "hl_lines=1" >}}
  
 $ ps2pdf -dEPSCrop output.eps output.pdf
 
@@ -140,7 +140,7 @@ $ ps2pdf -dEPSCrop output.eps output.pdf
 Now, let's put all of this in a script and run it:
 
 
-{{< highlight bash "hl_lines=1 5 6, style=monokai" >}}
+{{< highlight bash "hl_lines=1 5 6" >}}
 
 $ cat plot.plt
 set term postscript eps
@@ -158,7 +158,7 @@ There are other functions you can try to plot, most math functions would work, t
 
 Most of the time, I don't want to plot a function, and have my data in a csv file, it's very easy to plot two columns of a data file. Say I have this data in my *input.csv* file:
 
-{{< highlight bash "hl_lines=1, style=monokai" >}}
+{{< highlight bash "hl_lines=1" >}}
 $ cat input.csv
 column1,column2
 1,2
@@ -170,7 +170,7 @@ column1,column2
 
 and this is my plot.plt file:
 
-{{< highlight Gnuplot "style=monokai" >}}
+{{< highlight Gnuplot >}}
 
 set term png
 set output "output.png"
@@ -186,9 +186,8 @@ plot "input.csv" using 1 with lines ,\
 running this file with gnuplot will result in this graph:
 
 
-<img style="float:below" width="550" height="auto" src="/images/input.png">
+<img class="figure" width="550" src="/images/input.png" alt="Plot generated from an input data file">
 
 ## More advanced uses
 
 This is the the most basic case, you can imagine more complex data formats, including date and time (that GnuPlot recognizes). You can have different types of charts, and can fine tune almost everything in the chart. Colors, sizes, styles, etc, and you can read all about those on the [Gnuplot online documentation](http://www.gnuplot.info/documentation.html). The [Gallery of Demos](https://gnuplot.sourceforge.net/demo/) can give you ideas about what's possible and how to do it.
-

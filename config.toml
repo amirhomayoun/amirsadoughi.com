@@ -1,81 +1,65 @@
 baseURL = "https://amirsadoughi.com/"
 locale = "en-US"
 title = "Amir H. Sadoughi"
-theme = "blackburn"
-author = "Amir H. Sadoughi"
-copyright = "&copy; 2023. All rights reserved."
-canonifyurls = true
+enableRobotsTXT = true
 
 [pagination]
   pagerSize = 10
 
-[indexes]
+[taxonomies]
   tag = "tags"
   category = "categories"
-#post = "posts"
 
 [params]
-  # Shown in the home page
+  author = "Amir H. Sadoughi"
+  since = 2014
+  # Shown on the home page
   subtitle = "Writer ... solely for compilers, and now maybe for humans too!"
-#brand = "Blackburn"
-#  googleAnalytics = "Your Google Analytics tracking ID"
-  disqus = "amirsadoughi"
-  # CSS name for highlight.js
-  highlightjs = "androidstudio"
-  dateFormat = "02 Jan 2006, 15:04"
+  description = "Amir H. Sadoughi's personal site: notes on Linux, self-hosting, networking and tools."
+  mastodonHost = "mastodon.amirsadoughi.com"
 
-[menu]
-  # Shown in the side menu.
-  [[menu.main]]
-    name = "Home"
-    pre = "<i class='fa fa-home fa-fw'></i>"
-    weight = 1
-    identifier = "home"
-    url = "/"
-  [[menu.main]]
-    name = "About"
-    pre = "<i class='fa fa-user fa-fw'></i>"
-    weight = 2
-    identifier = "about"
-    url = "/about/"
-  [[menu.main]]
+  # Comments: set host (and siteID) to turn on remark42.
+  # Also allow the host in netlify.toml's Content-Security-Policy.
+  [params.remark42]
+    host = ""
+    siteID = "remark"
+
+  # Shown in the footer
+  [params.social]
+    github = "amirhomayoun"
+    mastodon = "amir"
+    linkedin = "amirsadoughi"
+    stackoverflow = "1727639"
+    goodreads = "119584"
+    lastfm = "amirhomayoun"
+    typeracer = "amirhomayoun"
+    athlinks = "252998642"
+
+[menus]
+  [[menus.main]]
     name = "Posts"
-    pre = "<i class='fa fa-list fa-fw'></i>"
-    weight = 3
-    identifier = "post"
-    url = "/post/"
-  [[menu.main]]
+    pageRef = "/post"
+    weight = 1
+  [[menus.main]]
     name = "Tags"
-#pre = "<i class='fa fa-folder fa-fw'></i>"
-    pre = "<i class='fas fa-tags'></i>"
-    weight = 4
-    identifier = "tags"
-    url = "/tags/"
-  [[menu.main]]
-    name = "Categories"
-    pre = "<i class='fa fa-folder fa-fw'></i>"
-    weight = 4
-    identifier = "categories"
-    url = "/categories/"
-  [[menu.main]]
+    pageRef = "/tags"
+    weight = 2
+  [[menus.main]]
+    name = "About"
+    pageRef = "/about"
+    weight = 3
+  [[menus.main]]
     name = "Contact"
-    pre = "<i class='fa fa-phone fa-fw'></i>"
-    weight = 5
-    url = "/contact/"
+    pageRef = "/contact"
+    weight = 4
 
-[params.social]
-  # Link your social networking accouns to the side menu
-  # by entering your username or ID.
-  #twitter = "amirhomayoun"
-  #facebook = "amirhomayoun"
-  #instagram = "amirhomayoun26"
-  github = "amirhomayoun"
-  stackoverflow = "1727639"
-  linkedin = "amirsadoughi"
-  athlinks = "252998642"
-  typeracer = "amirhomayoun"
-  lastfm = "amirhomayoun"
-  goodreads = "119584"
-  mastodon = "amir"
-[markup.goldmark.renderer]
-unsafe= true
+[markup]
+  [markup.goldmark.renderer]
+    unsafe = true
+  [markup.highlight]
+    noClasses = false
+    lineNumbersInTable = false
+
+[minify]
+  [minify.tdewolff.html]
+    keepWhitespace = false
