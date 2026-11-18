@@ -22,8 +22,9 @@ I can keep my source under git and can easily publish a post by a pushing to Git
 * Change your domain's DNS to Netlify's and set up TLS.
 
 
-Deploying via Netlify was the easiest part of it. Creating TLS certificates using [Let's encrypt](https://letsencrypt.org) (donate to them if you can!) was literally as easy as pressing a button and my website was up in a matter of minutes after I had something basic working locally. Hugo is also designed very logically and once you get used to its directory structure, you can make progress quickly. I suggest you find a theme you like and build on top of it. I am using the [blackburn](https://github.com/yoshiharuyamashita/blackburn) theme and you can find the source code of my website in [my Github](https://github.com/amirhomayoun/amirsadoughi.com).
+Deploying via Netlify was the easiest part of it. Creating TLS certificates using [Let's encrypt](https://letsencrypt.org) (donate to them if you can!) was literally as easy as pressing a button and my website was up in a matter of minutes after I had something basic working locally. Hugo is also designed very logically and once you get used to its directory structure, you can make progress quickly. I suggest you find a theme you like and build on top of it. ~~I am using the [blackburn](https://github.com/yoshiharuyamashita/blackburn) theme and~~ You can find the source code of my website in [my Github](https://github.com/amirhomayoun/amirsadoughi.com).
+
+**Update (November 2026):** After a few years of neglecting the website, I noticed Blackburn hasn't had any updates in years, and I also prefer a simpler approach now. Had Claude (maybe I should write about that too!) cook up a simple theme that lives in my repo.
  
 
 Seeing how easy it is to create new posts, I am hopeful that I will write more, probably about the topics found in [about me]({{< ref "about.md" >}}).
-
