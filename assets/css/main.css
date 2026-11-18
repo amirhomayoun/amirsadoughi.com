@@ -88,8 +88,9 @@ th, td { border-bottom: 1px solid var(--faint); padding: 0.35rem 0.75rem; text-a
 /* Code */
 code, pre, kbd { font-family: var(--mono); font-size: 0.85em; }
 :not(pre) > code { background: var(--code-bg); padding: 0.1em 0.35em; border-radius: 4px; }
+pre { background: var(--code-bg); }
+.highlight pre.chroma { background: #272822; } /* Monokai, in light and dark mode */
 pre, .highlight pre.chroma {
-  background: var(--code-bg);
   padding: 0.9rem 1rem;
   border-radius: 8px;
   overflow-x: auto;
