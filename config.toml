@@ -1,11 +1,13 @@
 baseURL = "https://amirsadoughi.com/"
-languageCode = "en-us"
+locale = "en-US"
 title = "Amir H. Sadoughi"
 theme = "blackburn"
 author = "Amir H. Sadoughi"
 copyright = "&copy; 2023. All rights reserved."
 canonifyurls = true
-paginate = 10
+
+[pagination]
+  pagerSize = 10
 
 [indexes]
   tag = "tags"
@@ -61,7 +63,7 @@ paginate = 10
     weight = 5
     url = "/contact/"
 
-[social]
+[params.social]
   # Link your social networking accouns to the side menu
   # by entering your username or ID.
   #twitter = "amirhomayoun"

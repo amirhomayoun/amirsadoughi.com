@@ -1,0 +1,22 @@
+{{- /* Hugo >= 0.134 builds summaries from whole paragraphs, which made
+       homepage excerpts 2-3x longer. Keep the old ~70-word plain-text excerpt. */ -}}
+{{- $words := findRE `\S+` (.Summary | plainify | htmlUnescape) -}}
+{{- $limit := .Site.Params.summaryWords | default 70 -}}
+<article>
+  <header>
+    <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+
+    {{ partial "post_meta.html" . }}
+
+  </header>
+
+  <p>
+  {{ delimit (first $limit $words) " " }}{{ if gt (len $words) $limit }} …{{ end }}
+  </p>
+
+  {{ if or .Truncated (gt (len $words) $limit) }}
+  <footer>
+    <a href="{{ .RelPermalink }}">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  {{ end }}
+</article>
