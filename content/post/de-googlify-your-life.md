@@ -4,7 +4,7 @@ date = 2018-02-26T00:19:23-05:00
 draft = false
 tags = ['gpg']
 categories = ['Security']
-description = ""
+description = "A running checklist for reducing how much of your life runs through Google: accounts, tracking, search and email."
 +++
 
 Instead of waiting for this to be "complete", I am going to release it, and will keep adding to it.
@@ -32,4 +32,3 @@ Things you can do to reduce the presence of Google in your life:
         * Switch your domain management from Google domains to Namecheap
         * Switch from Google keep to a note taking and syncing via syncthing system
         * Switch your DNS server from Google's to Dns.watch or OpenNIC
-

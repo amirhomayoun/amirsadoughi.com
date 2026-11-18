@@ -4,7 +4,7 @@ date = 2022-11-30T22:50:02-05:00
 draft = false
 tags = ['router', 'opnsense', 'network']
 categories = ['Security','Home Server']
-description = ""
+description = "Why I moved my home network from Asuswrt-Merlin to OPNsense: choosing it over pfSense, the hardware, and the initial setup."
 +++
 
 ## Background
@@ -19,7 +19,7 @@ You can read about the history of OPNSense on [their about page](https://opnsens
 
 ## Migration
 
-<img style="float:right" width="150" heigh="auto" src="/images/tmobile_router.png">
+<img class="float-right" width="150" src="/images/tmobile_router.png" alt="T-Mobile home internet gateway">
 
 To do a migration like this, it helps if you could set up a parallel system as the one you have and after getting comfortable with the new one migrate every client. To do that, I decided to use a T-Mobile 5g home internet. For about $50 a month, you can get a decent internet connection (if you are lucky enough and live in an area they cover well). I had speeds of up to 60-70 Mbps for download, and 20-30 Mbps for upload. Pretty good for what I need on a daily basis. The only issue with it is that you don't get a dedicated external IP address, as T-Mobile, like all other cell phone carriers, is using [CGNAT](https://en.wikipedia.org/wiki/Carrier-grade_NAT). Basically, the modem they give you gets a *private IP address* and some translation happens on T-Mobile side from your (dynamic) external IP address to the private one the router has. This is not ideal, for anyone who wants to expose self hosted services as you need to somehow connect your domain name to your (hopefully relatively stable if not static) external IP address. And of course, with CGNAT you cannot get to your services, as the NAT layer, even if you hit the temporary external IP address, will not allow port forwarding. So, all in all, the 5g internet was good enough for the transition period, where I hooked it up to my Asus router, and used it for daily things, as I was working on my new OPNSense set up. But I doubt I will keep it. Ideally, I want to have a backup internet connection and run my router in dual WAN mode, so that if my main connection goes down, all my services are still working uninterrupted, but for that I'd need a dedicated IP address which unfortunately T-Mobile does not provide [at least yet](https://community.t-mobile.com/tv-home-internet-7/nat-forwarding-in-t-mobile-gateway-39917).
 
@@ -27,20 +27,20 @@ To do a migration like this, it helps if you could set up a parallel system as t
 
 ### Router
 
-<img style="float:right" width="150" heigh="auto" src="/images/qotom_router.png">
+<img class="float-right" width="150" src="/images/qotom_router.png" alt="Qotom mini PC running OPNsense">
 
 I wanted a fan-less mini pc, and didn't want to spend too much either. I figured I'd need 8 GB of memory, and a 2 core decent CPU would be overkill. Qotom is a brand that makes a lot of mini pcs like this, and I ended up buying one for a few hundred dollars (including memory and ssd). You can go with something simpler as well (Not something ARM Based as OPNSEense works on BSD), but if you want to run VPN server/clients, penetration tests, netflow, DNS resolvers, and other services, it's probably wise to investing in something mid-range at least. Using these services, I see my memory usage is at %25, and I hardly see any CPU spikes.
 
 ### Switch
 
-<img style="float:right" width="150" heigh="auto" src="/images/switch.png">
+<img class="float-right" width="150" src="/images/switch.png" alt="Network switch">
 
 As I have a small setup, I decided to go with an 8 port layer 3 switch. This will help with managing VLANs, and can also power the access point using PoE.
 
 
 ### Access point
 
-<img style="float:right" width="150" heigh="auto" src="/images/ap.png">
+<img class="float-right" width="150" src="/images/ap.png" alt="Wireless access point">
 I went with a TP-Link access point. It can be powered using PoE, and it knows about VLANs, meaning I can create separate WI-FI networks for different categories. So, controlling what device connects to which interface (on the router side) comes down to what SSID it connects to. The access point tags packets with the correct VLAN, and the switch sends them through, and the router applies the correct firewall rules to the traffic. 
 
 

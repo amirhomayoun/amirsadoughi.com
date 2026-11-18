@@ -1,0 +1,9 @@
+{{- /* remark42: set [params.remark42] host and siteID in config to enable.
+       Also add the host to script-src, connect-src and frame-src in netlify.toml. */ -}}
+{{- with site.Params.remark42 }}{{ if .host }}
+<section class="comments" aria-label="Comments">
+  <div id="remark42" data-host="{{ .host }}" data-site-id="{{ .siteID | default "remark" }}" data-url="{{ $.Permalink }}"></div>
+  {{- $js := resources.Get "js/remark42.js" | minify | fingerprint }}
+  <script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" defer></script>
+</section>
+{{- end }}{{ end }}

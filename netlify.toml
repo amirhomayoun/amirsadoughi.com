@@ -1,13 +1,28 @@
+[build]
+  command = "hugo --gc --minify"
+  publish = "public"
+
 [build.environment]
-  NODE_VERSION = "24"
   HUGO_VERSION = "0.170.1"
 
 [[headers]]
   for = "/*"
   [headers.values]
     X-Frame-Options = "DENY"
-    X-XSS-Protection = "1; mode=block"
     Referrer-Policy = "no-referrer"
     X-Content-Type-Options = "nosniff"
-    Content-Security-Policy = "child-src 'self' app.netlify.com; script-src 'self' app.netlify.com netlify-cdp-loader.netlify.app amirsadoughi.com;"
-    Permissions-Policy = "geolocation=()"
+    Permissions-Policy = "geolocation=(), camera=(), microphone=()"
+    # No third-party scripts, styles or fonts. app.netlify.com / netlify-cdp-loader are
+    # only for Netlify's deploy-preview drawer. When enabling remark42, add its host to
+    # script-src, connect-src, frame-src and img-src.
+    Content-Security-Policy = "default-src 'self'; script-src 'self' app.netlify.com netlify-cdp-loader.netlify.app; style-src 'self'; img-src 'self' data: https://images.gr-assets.com; font-src 'self'; connect-src 'self'; frame-src 'none'; frame-ancestors 'none'; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests"
+
+# Fingerprinted CSS/JS never change at a given URL, so cache them for a year.
+[[headers]]
+  for = "/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+[[headers]]
+  for = "/js/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"

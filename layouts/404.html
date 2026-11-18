@@ -1,7 +1,7 @@
-{{ define "main"}}
-    <main id="main">
-      <div>
-       <h1 id="title"><a href="{{ "/" | relURL }}">Go Home</a></h1>
-      </div>
-    </main>
+{{ define "main" }}
+<section class="not-found">
+  <p class="code">404</p>
+  <h1>Page not found</h1>
+  <p>That page doesn't exist, or it moved. Try the <a href="{{ "post/" | relURL }}">list of posts</a> or go <a href="{{ "/" | relURL }}">home</a>.</p>
+</section>
 {{ end }}

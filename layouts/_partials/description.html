@@ -1,0 +1,4 @@
+{{- /* Page description: front matter, else a short excerpt. Returns plain text. */ -}}
+{{- $d := .Description -}}
+{{- if and (not $d) .IsPage -}}{{- $d = .Summary | plainify | htmlUnescape | truncate 160 -}}{{- end -}}
+{{- return (trim $d " \n") -}}

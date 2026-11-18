@@ -1,0 +1,22 @@
+{{- $s := site.Params.social }}
+{{- $links := slice
+  (dict "key" "github" "name" "GitHub" "url" "https://github.com/%s")
+  (dict "key" "mastodon" "name" "Mastodon" "url" (printf "https://%s/@%%s" (site.Params.mastodonHost | default "mastodon.social")))
+  (dict "key" "linkedin" "name" "LinkedIn" "url" "https://www.linkedin.com/in/%s")
+  (dict "key" "stackoverflow" "name" "Stack Overflow" "url" "https://stackoverflow.com/users/%s")
+  (dict "key" "goodreads" "name" "Goodreads" "url" "https://www.goodreads.com/user/show/%s")
+  (dict "key" "lastfm" "name" "Last.fm" "url" "https://www.last.fm/user/%s")
+  (dict "key" "typeracer" "name" "TypeRacer" "url" "https://data.typeracer.com/pit/profile?user=%s")
+  (dict "key" "athlinks" "name" "Athlinks" "url" "https://www.athlinks.com/athletes/%s")
+}}
+<footer class="site-footer">
+  <ul>
+    {{- range $l := $links }}
+    {{- with index $s $l.key }}
+    <li><a href="{{ printf $l.url . }}" rel="me">{{ $l.name }}</a></li>
+    {{- end }}
+    {{- end }}
+    {{- with site.Home.OutputFormats.Get "rss" }}<li><a href="{{ .RelPermalink }}">RSS</a></li>{{ end }}
+  </ul>
+  <p>&copy; {{ site.Params.since }}–{{ now.Year }} {{ site.Params.author }}</p>
+</footer>
