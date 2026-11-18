@@ -1,9 +1,6 @@
 [build.environment]
   NODE_VERSION = "24"
-  HUGO_VERSION = "0.123.8"
-
-[context.deploy-preview.environment]
-  HUGO_VERSION = "0.34"
+  HUGO_VERSION = "0.170.1"
 
 [[headers]]
   for = "/*"
